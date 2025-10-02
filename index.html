@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday ❤️ Aparna ❤️</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="fade-in">Happy Birthday ❤️ Aparna ❤️</h1>
+    <p class="message zoom-in">
+      <h2>To the most special person,</h2>
+      Please smile 😄 and keep smiling 😊😊😊 because you look cute while smiling and our memories will keep forever.  
+      On your special day, I wish you endless laughter, pure happiness,  
+      and a life filled with love as beautiful as your heart. 🎂💕
+    </p>
+
+    <div class="slideshow-container fade-in">
+      <div class="mySlides fade">
+        <img src="photos/photo1.jpg" alt="Memory 1">
+      </div>
+      <div class="mySlides fade">
+        <img src="photos/photo2.jpg" alt="Memory 2">
+      </div>
+      <div class="mySlides fade">
+        <img src="photos/photo3.jpg" alt="Memory 3">
+      </div>
+      <div class="mySlides fade">
+        <img src="photos/photo4.jpg" alt="Memory 4">
+      </div>
+    </div>
+<p>This website is for U. Click anywhere in the pages to see surprises</p>
+
+    <!-- <audio autoplay loop>
+      <source src="music/birthday_song.mp3" type="audio/mpeg">
+    </audio> -->
+
+    <audio id="bg-music" loop>
+  <source src="music/birthday_song.mp3" type="audio/mpeg">
+</audio>
+
+    <script>
+  const music = document.getElementById("bg-music");
+
+  document.addEventListener("click", () => {
+    music.play();
+    // start confetti here too 🎉
+  }, { once: true }); // only run once
+</script>
+
+    <canvas id="balloons"></canvas>
+    <canvas id="confetti"></canvas>
+
+    <footer>
+      <p>Made for U 💖 — <a href="https://www.instagram.com/__.aparnasingh/?utm_source=ig_web_button_share_sheet" target="_blank">Instagram</a></p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    // Confetti on page load 🎉
+    window.onload = () => {
+      setTimeout(() => {
+        confetti({
+          particleCount: 200,
+          spread: 120,
+          origin: { y: 4 }
+        });
+      }, 500);
+    };
+  </script>
+</body>
+</html>
